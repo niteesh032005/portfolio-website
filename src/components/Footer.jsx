@@ -29,7 +29,7 @@ const Footer = () => {
       </div>
       
       <div className="container mx-auto px-6 md:px-12 mt-8 pt-8 border-t border-slate-800 text-center text-sm text-slate-500">
-        <p>&copy; {new Date().getFullYear()} B.NITEESH Kumar. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} B.NITEESH KUMAR. All rights reserved.</p>
       </div>
     </footer>
   );
