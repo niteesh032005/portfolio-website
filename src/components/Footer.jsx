@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center">
         <div className="mb-6 md:mb-0">
           <Link to="hero" smooth={true} duration={500} className="cursor-pointer text-2xl font-bold text-primary tracking-tighter">
-            BN<span className="text-text-main">.</span>
+            B.NITEESH
           </Link>
           <p className="text-text-muted mt-2 text-sm max-w-xs">
             Building practical digital solutions and bringing ideas to life on the web.
@@ -29,7 +29,7 @@ const Footer = () => {
       </div>
       
       <div className="container mx-auto px-6 md:px-12 mt-8 pt-8 border-t border-slate-800 text-center text-sm text-slate-500">
-        <p>&copy; {new Date().getFullYear()} B. Niteesh Kumar. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} B.NITEESH Kumar. All rights reserved.</p>
       </div>
     </footer>
   );
