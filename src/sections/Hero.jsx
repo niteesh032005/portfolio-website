@@ -16,7 +16,11 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-primary font-semibold tracking-wider uppercase text-sm mb-4 block">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-primary/15 border border-primary/40 text-purple-200 text-xs md:text-sm font-medium mb-5 shadow-sm backdrop-blur-sm">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_rgba(52,211,153,0.8)]"></span>
+            Available for freelance work
+          </div>
+          <span className="text-primary font-semibold tracking-wider uppercase text-sm mb-3 block">
             Welcome to my portfolio
           </span>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-text-main mb-6 leading-tight">
@@ -32,7 +36,7 @@ const Hero = () => {
             I am a Computer Science Engineering student passionate about web development, problem solving, and building practical digital solutions.
           </p>
           
-          <div className="flex flex-wrap gap-4 mb-8">
+          <div className="flex flex-wrap gap-3 mb-8">
             <Button href="#projects" variant="primary">
               View Projects
             </Button>

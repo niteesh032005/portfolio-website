@@ -4,12 +4,12 @@ import { Menu, X } from 'lucide-react';
 import clsx from 'clsx';
 
 const navLinks = [
-  { name: 'About', to: 'about' },
-  { name: 'Skills', to: 'skills' },
-  { name: 'Projects', to: 'projects' },
-  { name: 'Certifications', to: 'certifications' },
-  { name: 'Resume', to: 'resume' },
-  { name: 'Contact', to: 'contact' },
+  { number: '01', name: 'About', to: 'about' },
+  { number: '02', name: 'Skills', to: 'skills' },
+  { number: '03', name: 'Experience', to: 'experience' },
+  { number: '04', name: 'Projects', to: 'projects' },
+  { number: '05', name: 'Education', to: 'education' },
+  { number: '06', name: 'Certifications', to: 'certifications' },
 ];
 
 const Navbar = () => {
@@ -31,11 +31,11 @@ const Navbar = () => {
     )}>
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         <Link to="hero" smooth={true} duration={500} className="cursor-pointer text-2xl font-bold text-primary tracking-tighter">
-          &nbsp;
+          B.NITEESH
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center gap-1 lg:gap-2">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -43,11 +43,12 @@ const Navbar = () => {
               smooth={true}
               duration={500}
               offset={-80}
-              className="text-sm font-medium text-text-muted hover:text-primary transition-colors cursor-pointer"
-              activeClass="text-primary font-semibold"
+              className="text-base font-medium text-text-muted hover:text-primary transition-all cursor-pointer flex items-center gap-2 py-2 px-3 lg:px-3.5 rounded-xl hover:bg-surface/60"
+              activeClass="text-primary font-semibold bg-surface/40 shadow-sm"
               spy={true}
             >
-              {link.name}
+              <span className="text-sm font-mono text-primary/90">{link.number}.</span>
+              <span>{link.name}</span>
             </Link>
           ))}
         </nav>
@@ -64,7 +65,7 @@ const Navbar = () => {
       {/* Mobile Nav */}
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-surface border-t border-slate-700/50 shadow-xl">
-          <nav className="flex flex-col py-4 px-6 space-y-4">
+          <nav className="flex flex-col py-4 px-6 space-y-1.5">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -72,10 +73,11 @@ const Navbar = () => {
                 smooth={true}
                 duration={500}
                 offset={-80}
-                className="text-base font-medium text-text-main hover:text-primary transition-colors"
+                className="text-lg font-medium text-text-main hover:text-primary transition-all flex items-center gap-3 cursor-pointer py-2.5 px-4 rounded-xl hover:bg-slate-800/50"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {link.name}
+                <span className="text-sm font-mono text-primary font-bold">{link.number}.</span>
+                <span>{link.name}</span>
               </Link>
             ))}
           </nav>
